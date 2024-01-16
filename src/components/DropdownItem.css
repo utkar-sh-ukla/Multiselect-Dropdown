@@ -1,41 +1,37 @@
 :root {
-    --highlight-opacity: 0.6;
-    --dropdown-item-hover-bg-color: hsl(360, 0%, 93.33%);
-    --dropdown-item-selected-bg-color: hsl(360, 0%, 93.33%);
-    --dropdown-item-email-color: hsl(0, 0%, 50%);
-  }
-  
-  .highlight {
-    opacity: var(--highlight-opacity);
-  }
-  
-  .dropdown-item {
-    padding: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  
-    &:hover {
-      background-color: var(--dropdown-item-hover-bg-color);
-    }
-  }
-  
-  .dropdown-item-selected {
-    background-color: var(--dropdown-item-selected-bg-color);
-  }
-  
-  .dropdown-item .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 4px;
-  }
-  
-  .dropdown-item .name {
-    margin-right: 4px;
-  }
-  
-  .dropdown-item .email {
-    color: var(--dropdown-item-email-color);
-  }
-  
+  --item-hover-bg: hsl(360, 0%, 93.33%);
+  --item-selected-bg: hsl(360, 0%, 93.33%);
+  --item-color: hsl(0, 0%, 50%);
+  --item-selected-color: hsl(0, 0%, 0%);
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: var(--item-hover-bg) hover;
+  background-color: var(--item-selected-bg) selected;
+}
+
+.dropdown-item .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.dropdown-item .name,
+.dropdown-item .email {
+  color: var(--item-color);
+  margin-right: 4px;
+}
+
+.dropdown-item .name {
+  font-weight: 500;
+}
+
+.name .highlight,
+.email .highlight {
+  color: var(--item-selected-color);
+}
