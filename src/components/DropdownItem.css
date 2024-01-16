@@ -1,8 +1,8 @@
 :root {
-  --item-hover-bg: hsl(360, 0%, 93.33%);
-  --item-selected-bg: hsl(360, 0%, 93.33%);
-  --item-color: hsl(0, 0%, 50%);
-  --item-selected-color: hsl(0, 0%, 0%);
+  --dropdown-item-hover-bg: hsl(360, 0%, 93.33%);
+  --dropdown-item-selected-bg: hsl(360, 0%, 93.33%);
+  --dropdown-item-color: hsl(0, 0%, 50%);
+  --dropdown-item-selected-color: hsl(0, 0%, 0%);
 }
 
 .dropdown-item {
@@ -10,8 +10,14 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: var(--item-hover-bg) hover;
-  background-color: var(--item-selected-bg) selected;
+
+  &:hover {
+    background-color: var(--dropdown-item-hover-bg);
+  }
+}
+
+.dropdown-item-selected {
+  background-color: var(--dropdown-item-selected-bg);
 }
 
 .dropdown-item .avatar {
@@ -23,7 +29,7 @@
 
 .dropdown-item .name,
 .dropdown-item .email {
-  color: var(--item-color);
+  color: var(--dropdown-item-color);
   margin-right: 4px;
 }
 
@@ -33,5 +39,5 @@
 
 .name .highlight,
 .email .highlight {
-  color: var(--item-selected-color);
+  color: var(--dropdown-item-selected-color);
 }
