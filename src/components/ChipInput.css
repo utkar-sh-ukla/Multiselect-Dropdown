@@ -8,7 +8,7 @@
 }
 
 .chip-input-container {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
@@ -33,6 +33,7 @@
   padding: 8px;
   width: 400px;
   border: none;
+  flex: 1;
 
   &:focus {
     outline: none;
