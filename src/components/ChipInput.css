@@ -1,0 +1,58 @@
+:root {
+  --primary-border-color: hsl(0, 0%, 80%);
+  --hover-border-color: hsl(204, 100%, 40%);
+  --input-placeholder-color: hsl(0, 0%, 40%);
+  --dropdown-background: hsl(0, 0%, 100%);
+  --dropdown-border: hsl(0, 0%, 80%);
+  --box-shadow-color: hsla(0, 0%, 0%, 0.1);
+}
+
+.chip-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--primary-border-color);
+  cursor: text;
+  max-width: 60rem;
+  margin-inline: auto;
+  margin-top: 1rem;
+
+  &:focus-within,
+  &:hover {
+    border-color: var(--hover-border-color);
+  }
+}
+
+.chip-input-box {
+  position: relative;
+}
+
+.chip-input-box .input {
+  padding: 8px;
+  width: 400px;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
+  }
+}
+
+.chip-input-box .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--dropdown-background);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+}

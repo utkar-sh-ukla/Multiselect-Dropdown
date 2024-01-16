@@ -1,0 +1,46 @@
+:root {
+  --chip-background-color: hsl(0, 0%, 88%);
+  --highlighted-chip-border-color: hsl(240, 100%, 50%);
+}
+
+.chip {
+  background-color: var(--chip-background-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+
+  &.highlighted-chip {
+    border: 2px solid var(--highlighted-chip-border-color);
+  }
+}
+
+.chip .avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.chip .name {
+  margin-right: 4px;
+}
+
+.chip .remove-icon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
